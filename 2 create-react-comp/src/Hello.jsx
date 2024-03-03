@@ -1,8 +1,9 @@
 function Hello() {
 
     let myName = 'Tarun';
+    let number = 456;
     let fullName = () => {
-        return 'Tarun Joshi'
+        return 'Tarun Joshi';
     }
 
     return <h3>
@@ -11,4 +12,4 @@ function Hello() {
     </h3>
 }
 
-export default Hello
+export default Hello;

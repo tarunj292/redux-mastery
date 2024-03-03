@@ -1,4 +1,5 @@
-import Hello from "./Hello.jsx"
+import Hello from "./Hello"
+import Random from "./Random";
 
 function App() {
   return <div>
@@ -6,7 +7,9 @@ function App() {
       Hello World
     </h1>
     <Hello />
+    <Random />
+    <Random />
   </div>
 }
 
-export default App
+export default App;
