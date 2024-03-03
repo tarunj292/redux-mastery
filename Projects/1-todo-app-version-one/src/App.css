@@ -1,7 +1,26 @@
 h1 {
     font-weight: 700;
+    font-size: 45px;
+    margin: 10px;
+    margin-bottom: 20px;
 }
 
 input {
-    padding: 10px 5px;
+    width: 100%;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.items-contanier {
+    text-align: left;
+}
+
+.kg-row {
+    margin: 10px 5px;
+}
+
+.kg-button {
+    min-width: 80px;
 }
