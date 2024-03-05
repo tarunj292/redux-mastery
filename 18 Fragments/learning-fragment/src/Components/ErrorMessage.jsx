@@ -1,6 +1,4 @@
-const ErrorMessage = () => {
-
-    const foodItemsList = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+const ErrorMessage = ({ foodItemsList }) => {
 
     return (
         <>
