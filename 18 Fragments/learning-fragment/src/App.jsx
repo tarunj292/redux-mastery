@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FoodItems from "./Components/FoodItems";
 import ErrorMessage from "./Components/ErrorMessage";
 import "./App.css"
+import Container from "./Components/Container";
 
 function App() {
 
@@ -9,9 +10,14 @@ function App() {
 
   return (
     <>
-      <h1 className="food-heading">Healty Food</h1>
-      <ErrorMessage foodItemsList={foodItemsList} />
-      <FoodItems foodItemsList={foodItemsList} />
+      <Container>
+        <h1 className="food-heading">Healty Food</h1>
+        <ErrorMessage foodItemsList={foodItemsList} />
+        <FoodItems foodItemsList={foodItemsList} />
+      </Container>
+      <Container>
+        <p>Above are the list of healthy foods that are good for your health and well being.</p>
+      </Container>
     </>
   );
 }
