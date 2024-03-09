@@ -1,6 +1,6 @@
-import styles from "./FoodInput.module.css"
+import styles from "./EnterFood.module.css"
 
-const FoodInput = ({ handleOnChange }) => {
+const EnterFood = ({ handleOnChange }) => {
 
     return (
         <>
@@ -9,4 +9,4 @@ const FoodInput = ({ handleOnChange }) => {
     )
 }
 
-export default FoodInput;
+export default EnterFood;

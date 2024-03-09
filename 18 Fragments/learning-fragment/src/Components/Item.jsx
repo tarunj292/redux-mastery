@@ -1,15 +1,15 @@
 import styles from "./Item.module.css"
 
 const Item = (props) => {
-    const foodItem = props.item;
+    const foodItem = props.foodItem;
 
-    const handleBuyBtnClick = () => {
-        console.log(`${foodItem} being bought`)
-    }
+    // const handleBuyBtnClick = () => {
+    //     console.log(`${foodItem} being bought`)
+    // }
     return (
         <li className={`${styles["kg-item"]} list-group-item`}>
-            <span className={styles["kg-span"]}>{props.item}</span>
-            <button className={`${styles.btn} btn btn-info`} onClick={handleBuyBtnClick}>Buy</button>
+            <span className={styles["kg-span"]}>{foodItem}</span>
+            <button className={`${styles.btn} btn btn-info`} onClick={props.handleBuyBtn}>Buy</button>
         </li>
     )
 }
