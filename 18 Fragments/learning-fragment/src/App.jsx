@@ -8,22 +8,24 @@ import { useState } from "react";
 
 function App() {
 
-  let [textToShow, setTextState] = useState("Food Item Entered by user");
+  let [foodItems, setFoodItems] = useState([]);
 
-  const foodItemsList = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
-
-  const handleOnChange = (event) => {
-    setTextState(event.target.value);
+  const onKeyDown = (event) => {
+    if (event.key === "Enter") {
+      let newFoodItem = event.target.value;
+      let newItems = [...foodItems, newFoodItem]
+      setFoodItems(newItems);
+      event.target.value = ""
+    }
   }
 
   return (
     <>
       <Container>
         <h1 className="food-heading">Healty Food</h1>
-        <ErrorMessage foodItemsList={foodItemsList} />
-        <FoodInput handleOnChange={handleOnChange} />
-        <p>{textToShow}</p>
-        <FoodItems foodItemsList={foodItemsList} />
+        <FoodInput handleKeyDown={onKeyDown} />
+        <ErrorMessage foodItemsList={foodItems} />
+        <FoodItems foodItemsList={foodItems} />
       </Container>
       {/* <Container>
         <p>Above are the list of healthy foods that are good for your health and well being.</p>
